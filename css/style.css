@@ -1,0 +1,33 @@
+body {
+	background: #f0f0f0;
+	color: #444444;
+    font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
+}
+
+div {
+	margin: 1em;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+ul {
+	font-size: 2em;
+}
+
+li {
+	display: inline;
+}
+
+a {
+	color: #444444;
+}
+
+a.fb {
+	color: #5a6b9a;
+}
+
+a.p {
+	color: #d05954;
+}
