@@ -1,13 +1,22 @@
-html {
+html, body {
 	height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	height: 100%;
 	background: #ffdfd0;
 	background: linear-gradient(to bottom, #ffdfd0 80%, #fdc8bb) fixed;
 	color: #5a5a5a;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
+}
+
+.header {
+	position: fixed;
+}
+
+.content {
+	padding: 5em 1em 0 20em;
 }
 
 div {
@@ -36,4 +45,41 @@ a.fb {
 
 a.p {
 	color: #d05954;
+}
+
+/* skyline */
+.parallax {
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.parallax div {
+	margin: 0;
+}
+
+.parallax__layer {
+	fill: #566288;
+}
+.parallax__layer:nth-last-of-type(1) {
+	fill: #0d142b;
+}
+.parallax__layer:nth-last-of-type(2) {
+	fill: #162041;
+}
+.parallax__layer:nth-last-of-type(3) {
+	fill: #242e54;
+}
+.parallax__layer:nth-last-of-type(4) {
+	fill: #37456b;
+}
+
+/* Reset */
+svg {
+	display: block;
+}
+
+h1, ul {
+	margin: 0;
+	padding: 0;
 }
