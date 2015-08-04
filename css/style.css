@@ -1,6 +1,12 @@
+html {
+	height: 100%;
+}
+
 body {
-	background: #f0f0f0;
-	color: #444444;
+	height: 100%;
+	background: #ffdfd0;
+	background: linear-gradient(to bottom, #ffdfd0 80%, #fdc8bb) fixed;
+	color: #5a5a5a;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
 }
 
@@ -21,7 +27,7 @@ li {
 }
 
 a {
-	color: #444444;
+	color: #555;
 }
 
 a.fb {
