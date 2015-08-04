@@ -16,7 +16,7 @@ body {
 }
 
 .content {
-	padding: 5em 1em 0 20em;
+	padding: 5em 1em 316.333px 20em;
 }
 
 div {
@@ -50,8 +50,11 @@ a.p {
 /* skyline */
 .parallax {
 	margin: 0;
+	min-height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
+	position: relative;
+	pointer-events: none;
 }
 
 .parallax div {
@@ -60,6 +63,8 @@ a.p {
 
 .parallax__layer {
 	fill: #566288;
+	position: absolute;
+	bottom: 0;
 }
 .parallax__layer:nth-last-of-type(1) {
 	fill: #0d142b;
