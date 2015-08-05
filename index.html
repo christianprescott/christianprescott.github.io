@@ -18,14 +18,14 @@
 			<li><a href="mailto:me@christianprescott.com" title="Contact"><i class="fa fa-envelope"></i></a></li>
 		</ul>
 	</div>
-	<div class="parallax">
-		<div class="content">
-			<p>She's got that, je ne sais quoi, you know it. End of the rainbow looking treasure. Got a motel and built a fort out of sheets. Heard it's beautiful, be the judge and my girls gonna take a vote. Open up your heart and just let it begin. Katy my lady, lookie here baby, I'm all up on ya, cuz you're representin' California. I know a place where the grass is really greener. What? Wait. No, no, no, no. Day drinking at the Wildcats, sucking real bad at Mariah Carey-oke.</p>
+	<div class="content">
+		<p>She's got that, je ne sais quoi, you know it. End of the rainbow looking treasure. Got a motel and built a fort out of sheets. Heard it's beautiful, be the judge and my girls gonna take a vote. Open up your heart and just let it begin. Katy my lady, lookie here baby, I'm all up on ya, cuz you're representin' California. I know a place where the grass is really greener. What? Wait. No, no, no, no. Day drinking at the Wildcats, sucking real bad at Mariah Carey-oke.</p>
 
-			<p>Day drinking at the Wildcats, sucking real bad at Mariah Carey-oke. Maybe a reason why all the doors are closed. Yo, shout out to all you kids, buying bottle service, with your rent money. West coast represent now put your hands up! Make it like your birthday everyday. (This is how we do) I can see the writing on the wall. So cover your eyes, I have a surprise. 'Cause, baby, you're a firework. You're so hypnotizing, could you be the devil? Could you be an angel? Yeah, you take me to utopia. I should've told you what you meant to me 'Cause now I pay the price.</p>
+		<p>Day drinking at the Wildcats, sucking real bad at Mariah Carey-oke. Maybe a reason why all the doors are closed. Yo, shout out to all you kids, buying bottle service, with your rent money. West coast represent now put your hands up! Make it like your birthday everyday. (This is how we do) I can see the writing on the wall. So cover your eyes, I have a surprise. 'Cause, baby, you're a firework. You're so hypnotizing, could you be the devil? Could you be an angel? Yeah, you take me to utopia. I should've told you what you meant to me 'Cause now I pay the price.</p>
 
-			<p>Bikinis, zucchinis, Martinis, no weenies. What? Wait. No, no, no, no. Yeah, she runs the place like Penny lane. If you wanna dance, if you want it all, you know that I'm the girl that you should call. I finally found you my missing puzzle piece, I'm complete. It’s a yes or no, no maybe. For you I'll risk it all, all. I'm walking on air.</p>
-		</div>
+		<p>Bikinis, zucchinis, Martinis, no weenies. What? Wait. No, no, no, no. Yeah, she runs the place like Penny lane. If you wanna dance, if you want it all, you know that I'm the girl that you should call. I finally found you my missing puzzle piece, I'm complete. It’s a yes or no, no maybe. For you I'll risk it all, all. I'm walking on air.</p>
+	</div>
+	<div id="parallax" class="parallax">
 		<div class="parallax__layer parallax__layer--back">
 			<svg class="title" width="1024" height="316.333" viewBox="0 0 1024 316.333">
 				<g id="_x31_">
@@ -54,4 +54,31 @@
 		</div>
 	</div>
 	</body>
+		<script type="text/javascript">
+		/*
+		 * Simple, but not very robust, parallax scrolling in vanilla JS. Won't
+		 * stand up to DOM manipulation.
+		 */
+
+		// Back to front
+		var layers = document.getElementById('parallax').children;
+
+		function tick(){
+			var viewport = document.body.offsetHeight;
+			var scrollable = document.body.scrollHeight - viewport;
+			var scrolled = window.pageYOffset;
+			var offset = (scrollable - scrolled) / Math.max(viewport, 1);
+
+			for(var index = 0; index < layers.length; index++){
+				var layer = layers[index];
+				layer.style.bottom = offset * index * -140 + 'px';
+			}
+		}
+
+		function request(){ requestAnimationFrame(tick) }
+
+		window.addEventListener('load', request, false);
+		window.addEventListener('scroll', request, false);
+		window.addEventListener('resize', request, false);
+	</script>
 </html>
