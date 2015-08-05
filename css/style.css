@@ -49,12 +49,40 @@ a {
 	color: #5a5a5a;
 }
 
-a.fb {
-	color: #5a6b9a;
+/* Icons */
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=4.4.0');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-a.p {
+.icon {
+	font-family: 'FontAwesome';
+	text-decoration: none;
+}
+
+.icon > span {
+	display: none;
+}
+
+.icon.fb:before {
+	color: #5a6b9a;
+	content: "\f082";
+}
+
+.icon.p:before {
 	color: #d05954;
+	content: "\f0d3";
+}
+
+.icon.gh:before {
+	content: "\f092";
+}
+
+.icon.mail:before {
+	content: "\f199";
 }
 
 /* skyline */
