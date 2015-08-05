@@ -11,12 +11,19 @@ body {
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
 }
 
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+
 .header {
 	position: fixed;
+	margin: 0;
 }
 
 .content {
-	padding: 5em 1em 0 20em;
+	flex: 1;
 }
 
 div {
