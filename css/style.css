@@ -5,6 +5,8 @@ html, body {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	background: #ffdfd0;
 	background: linear-gradient(to bottom, #ffdfd0 80%, #fdc8bb) fixed;
 	color: #5a5a5a;
@@ -12,6 +14,7 @@ body {
 }
 
 .flex-row {
+	flex: 1 1 auto;
 	display: flex;
 	flex-direction: row;
 	margin: 0;
@@ -56,6 +59,7 @@ a.p {
 
 /* skyline */
 .parallax {
+	flex: none;
 	margin: 0;
 	height: 316.333px;
 	overflow: hidden;
