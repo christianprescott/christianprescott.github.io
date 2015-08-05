@@ -29,6 +29,10 @@ body {
 	flex: 1;
 }
 
+.content p:first-of-type {
+    margin-top: 0;
+}
+
 div {
 	margin: 1em;
 }
@@ -122,4 +126,15 @@ svg {
 h1, ul {
 	margin: 0;
 	padding: 0;
+}
+
+/* Reflow to one column */
+@media(max-width: 700px) {
+	.flex-row {
+		flex-direction: column;
+	}
+
+	.header {
+		position: initial;
+	}
 }
