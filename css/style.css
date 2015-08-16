@@ -80,6 +80,11 @@ a {
 	content: "\f0d3";
 }
 
+.icon.ig:before {
+	color: #977660;
+	content: "\f16d";
+}
+
 .icon.gh:before {
 	content: "\f092";
 }
