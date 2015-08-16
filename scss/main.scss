@@ -1,3 +1,5 @@
+@import 'bourbon/bourbon';
+
 $color-background: #ffdfd0;
 $color-body: #5a5a5a;
 $color-fb: #5a6b9a;
@@ -11,17 +13,17 @@ html, body {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+	@include display(flex);
+	@include flex-direction(column);
 	background: $color-background;
 	color: $color-body;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
 }
 
 .flex-row {
-	flex: 1 0 auto;
-	display: flex;
-	flex-direction: row;
+	@include flex(1 0 auto);
+	@include display(flex);
+	@include flex-direction(row);
 	margin: 0;
 }
 
@@ -31,7 +33,7 @@ body {
 }
 
 .content {
-	flex: 1;
+	@include flex(1);
 
 	p:first-of-type {
 	    margin-top: 0;
@@ -106,7 +108,7 @@ a {
 
 /* skyline */
 .parallax {
-	flex: none;
+	@include flex(none);
 	margin: 0;
 	height: 316.333px;
 	overflow: hidden;
@@ -142,7 +144,7 @@ svg {
 /* Reflow to one column */
 @media(max-width: 700px) {
 	.flex-row {
-		flex-direction: column;
+		@include flex-direction(column);
 	}
 
 	.header {
