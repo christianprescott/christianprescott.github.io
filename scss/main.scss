@@ -53,16 +53,39 @@ h1 {
 	font-size: 2em;
 }
 
-ul {
-	font-size: 2em;
-}
-
-li {
-	display: inline;
-}
-
 a {
 	color: $color-body;
+}
+
+.social {
+	font-size: 2em;
+
+	li {
+		display: inline;
+	}
+}
+
+.activities {
+	list-style-type: none;
+	padding: 0;
+
+	> li {
+		list-style-position: inside;
+		margin-bottom: 1.5em;
+
+		.period {
+			font-weight: bold;
+		}
+
+	}
+}
+
+.details {
+	list-style-type: square;
+
+	li {
+		margin-top: 0.5em;
+	}
 }
 
 /* Icons */
