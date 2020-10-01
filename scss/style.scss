@@ -41,7 +41,7 @@ body {
 }
 
 div {
-	margin: 1em;
+	margin: 1rem;
 }
 
 h1, ul {
@@ -50,7 +50,7 @@ h1, ul {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 a {
@@ -58,7 +58,7 @@ a {
 }
 
 .social {
-	font-size: 2em;
+	font-size: 2rem;
 
 	li {
 		display: inline;
@@ -71,7 +71,7 @@ a {
 
 	> li {
 		list-style-position: inside;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.5rem;
 
 		.period {
 			font-weight: bold;
@@ -84,7 +84,7 @@ a {
 	list-style-type: square;
 
 	li {
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 	}
 }
 
@@ -101,8 +101,10 @@ a {
 	font-family: 'FontAwesome';
 	text-decoration: none;
 
-	> span {
+	span {
 		display: none;
+		font-size: 1rem;
+		margin-left: 0.5rem;
 	}
 
 	&.fb:before {

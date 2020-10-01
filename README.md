@@ -2,10 +2,11 @@ Feast your eyes [http://christianprescott.com/](http://christianprescott.com/)
 
 ## Compiling Assets
 
+Install [Sass](https://sass-lang.com/install)
+
 ```
-gem install sass
 # Development
-sass --watch scss/main.scss:css/style.css
+sass --watch scss/:css/
 # Deployment
-sass scss/main.scss css/style.css --style compressed
+sass --style compressed scss/:css/
 ```

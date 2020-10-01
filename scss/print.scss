@@ -1,0 +1,41 @@
+@import 'bourbon/bourbon';
+
+$color-background: #ffffff;
+$color-body: #000000;
+
+body {
+	background: $color-background;
+	color: $color-body;
+}
+
+a {
+	color: $color-body;
+}
+
+.flex-row {
+	@include flex-direction(column);
+}
+
+.header {
+	position: initial;
+}
+
+#header-spacer {
+	display: none;
+}
+
+.social {
+	li {
+		display: block;
+	}
+
+	.icon {
+		span {
+			display: initial;
+		}
+	}
+}
+
+#parallax {
+  display: none;
+}
