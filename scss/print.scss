@@ -5,10 +5,9 @@ $color-body: #000000;
 
 body {
 	background: $color-background;
-	color: $color-body;
 }
 
-a {
+body, a {
 	color: $color-body;
 }
 

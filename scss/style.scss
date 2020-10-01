@@ -2,9 +2,6 @@
 
 $color-background: #fffaf8;
 $color-body: #202020;
-$color-fb: #5a6b9a;
-$color-p: #d05954;
-$color-ig: #977660;
 
 html, body {
 	height: 100%;
@@ -16,8 +13,15 @@ body {
 	@include display(flex);
 	@include flex-direction(column);
 	background: $color-background;
-	color: $color-body;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
+}
+
+body, a {
+	color: $color-body;
+}
+
+div {
+	margin: 1rem;
 }
 
 .flex-row {
@@ -40,10 +44,6 @@ body {
 	}
 }
 
-div {
-	margin: 1rem;
-}
-
 h1, ul {
 	margin: 0;
 	padding: 0;
@@ -51,10 +51,6 @@ h1, ul {
 
 h1 {
 	font-size: 2rem;
-}
-
-a {
-	color: $color-body;
 }
 
 .social {
@@ -105,21 +101,6 @@ a {
 		display: none;
 		font-size: 1rem;
 		margin-left: 0.5rem;
-	}
-
-	&.fb:before {
-		color: $color-fb;
-		content: "\f082";
-	}
-
-	&.p:before {
-		color: $color-p;
-		content: "\f0d3";
-	}
-
-	&.ig:before {
-		color: $color-ig;
-		content: "\f16d";
 	}
 
 	&.gh:before {
