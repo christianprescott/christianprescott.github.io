@@ -110,6 +110,10 @@ h1 {
 	&.mail:before {
 		content: "\f199";
 	}
+
+	&.phone:before {
+		content: "\f098";
+	}
 }
 
 /* skyline */
@@ -148,12 +152,16 @@ svg {
 }
 
 /* Reflow to one column */
-@media(max-width: 700px) {
+@media(max-width: 800px) {
 	.flex-row {
 		@include flex-direction(column);
 	}
 
 	.header {
 		position: initial;
+	}
+
+	#header-spacer {
+		display: none;
 	}
 }
