@@ -1,0 +1,11 @@
+#!/bin/sh
+
+sass_command="sass --style compressed scss/:css/"
+$sass_command
+
+if [ "$(git diff --stat css/)" != '' ]; then
+	echo "Error: Commit missing compiled css."
+	echo
+	echo "Run \`$sass_command\` and add changes."
+	exit 1
+fi

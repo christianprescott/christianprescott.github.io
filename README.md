@@ -4,7 +4,9 @@ Feast your eyes [http://christianprescott.com/](http://christianprescott.com/)
 
 Install [Sass](https://sass-lang.com/install)
 
-```
+```sh
+# Install pre-commit asset compilation check
+cp pre-commit .git/hooks/pre-commit
 # Development
 sass --watch scss/:css/
 # Deployment
