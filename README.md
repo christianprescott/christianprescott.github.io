@@ -1,14 +1,17 @@
 Feast your eyes [http://christianprescott.com/](http://christianprescott.com/)
 
-## Compiling Assets
-
-Install [Sass](https://sass-lang.com/install)
+## Development
 
 ```sh
+npm install
+npm run dev
+```
+
+## Deployment
+
+```
 # Install pre-commit asset compilation check
 cp pre-commit .git/hooks/pre-commit
-# Development
-sass --watch scss/:css/
 # Deployment
-sass --style compressed scss/:css/
+npm run build
 ```

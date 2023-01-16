@@ -1,0 +1,24 @@
+{
+  "name": "christianprescott.github.io",
+  "version": "1.0.0",
+  "description": "Feast your eyes [http://christianprescott.com/](http://christianprescott.com/)",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --style compressed scss/:css/",
+    "dev": "sass --watch scss/:css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianprescott/christianprescott.github.io.git"
+  },
+  "author": "Christian Prescott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christianprescott/christianprescott.github.io/issues"
+  },
+  "homepage": "https://github.com/christianprescott/christianprescott.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
