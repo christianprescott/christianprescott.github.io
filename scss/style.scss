@@ -163,3 +163,13 @@ svg {
 		display: none;
 	}
 }
+
+@media(prefers-color-scheme: dark) {
+	body {
+		background: $color-body;
+	}
+	
+	body, a {
+		color: $color-background
+	}	
+}
