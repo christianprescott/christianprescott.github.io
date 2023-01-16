@@ -1,5 +1,5 @@
 $color-background: white;
-$color-body: #202020;
+$color-body: #282828;
 
 html, body {
 	height: 100%;
@@ -11,6 +11,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: $color-background;
+	font-size: 1rem;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
 }
 
@@ -150,7 +151,7 @@ svg {
 }
 
 /* Reflow to one column */
-@media(max-width: 800px) {
+@media(max-width: 1024px) {
 	.flex-row {
 		flex-direction: column;
 	}
