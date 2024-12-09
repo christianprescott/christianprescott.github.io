@@ -1,1 +1,45 @@
-body{background:#fff;font-size:12px}body,a{color:#000}.flex-row{flex-direction:column}.header{position:initial}#header-spacer{display:none}#callme{display:initial !important}.social{font-size:1rem}.social li{display:block}.social .icon span{display:initial}#parallax{display:none}/*# sourceMappingURL=print.css.map */
+
+body {
+    --color-background: white;
+    --color-body: #282828;
+    background: var(--color-background);
+	font-size: 12px;
+}
+
+body, a {
+	color: var(--color-body);
+}
+
+.flex-row {
+	flex-direction: column;
+}
+
+.header {
+	position: initial;
+}
+
+#header-spacer {
+	display: none;
+}
+
+#callme {
+	display: initial !important;
+}
+
+.social {
+	font-size: 1rem;
+
+	li {
+		display: block;
+	}
+
+	.icon {
+		span {
+			display: initial;
+		}
+	}
+}
+
+#parallax {
+  display: none;
+}
