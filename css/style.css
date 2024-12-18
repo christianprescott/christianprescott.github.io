@@ -112,13 +112,12 @@ h1 {
 	&.phone:before {
 		content: "\f098";
 	}
-	/* &.square:before {
+	&.square:before {
 		content: "\f0c8";
 	}
 	&.map:before {
-		color: red;
 		content: "\f041";
-	} */
+	}
 }
 
 /* skyline */
