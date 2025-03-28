@@ -33,6 +33,10 @@ body, a {
 		display: block;
 	}
 
+	.ig, .steam {
+		display: none;
+	}
+
 	.icon {
 		span {
 			display: initial;

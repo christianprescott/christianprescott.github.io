@@ -106,6 +106,12 @@ h1 {
 	&.gh:before {
 		content: "\f092";
 	}
+	&.ig:before {
+		content: "\f16d";
+	}
+	&.steam:before {
+		content: "\f1b7";
+	}
 	&.mail:before {
 		content: "\f199";
 	}
