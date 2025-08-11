@@ -147,22 +147,27 @@
 		// Back to front
 		var layers = document.getElementById('parallax').children;
 
-		function tick(){
-			var viewport = document.body.offsetHeight;
-			var scrollable = document.body.scrollHeight - viewport;
-			var scrolled = window.pageYOffset;
-			var offset = (scrollable - scrolled) / Math.max(viewport, 1);
+		function setParallaxFromTilt(beta) {
+			// beta is the front-to-back tilt in degrees (-180 to 180)
+			// Normalize beta to a value between -1 and 1 (limit to [-45, 45])
+			var maxTilt = 45;
+			var tilt = Math.max(-maxTilt, Math.min(maxTilt, beta || 0));
+			var normalized = tilt / maxTilt;
 
-			for(var index = 0; index < layers.length; index++){
-				var layer = layers[index];
-				layer.style.bottom = offset * index * -140 + 'px';
+			for (var index = 0; index < layers.length; index++) {
+				layers[index].style.bottom = normalized * index * -140 + 'px';
 			}
 		}
 
-		function request(){ requestAnimationFrame(tick) }
+		function handleOrientation(event) {
+			setParallaxFromTilt(event.beta);
+		}
 
-		window.addEventListener('load', request, false);
-		window.addEventListener('scroll', request, false);
-		window.addEventListener('resize', request, false);
+		if (window.DeviceOrientationEvent) {
+			window.addEventListener('deviceorientation', handleOrientation, true);
+		} else {
+			// No accelerometer support, keep layers static
+			setParallaxFromTilt(0);
+		}
 	</script>
 </html>
