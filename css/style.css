@@ -36,6 +36,7 @@ div {
 
 .content {
 	flex: 1;
+	margin-top: 0;
 
 	p:first-of-type {
 	    margin-top: 0;
@@ -50,6 +51,10 @@ h1, ul {
 h1 {
 	font-size: 2rem;
 	text-wrap: nowrap;
+}
+
+h2 {
+	margin-bottom: 0;
 }
 
 .social {
