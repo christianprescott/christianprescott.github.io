@@ -10,8 +10,18 @@ body, a {
 	color: var(--color-body);
 }
 
-.flex-row {
-	flex-direction: column;
+.grid {
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas:
+		"header"
+		"skills"
+		"content";
+	gap: 0.5rem;
+	padding: 0;
+}
+
+.portfolio {
+	display: none;
 }
 
 .header {

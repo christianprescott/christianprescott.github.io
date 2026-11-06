@@ -8,8 +8,8 @@
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: minmax(auto, 1fr) auto;
 	background: var(--color-background);
 	font-size: 1rem;
     font-family: 'Merriweather', 'Georgia', "Times New Roman", serif;
@@ -23,23 +23,47 @@ div {
 	margin: 1rem 1rem 0 1rem;
 }
 
-.flex-row {
-	flex: 1 0 auto;
-	display: flex;
-	flex-direction: row;
+.grid {
+	display: grid;
+	grid-template-columns: max-content minmax(0, 1fr);
+	grid-template-areas:
+		"header portfolio"
+		"skills content";
+	align-content: start;
+	gap: 1rem;
+	margin: 0;
+	padding: 1rem;
+}
+
+.grid > div {
+	min-width: 0;
 	margin: 0;
 }
 
 .header {
-	flex: 0 1 0%;
+	grid-area: header;
+}
+
+.portfolio {
+	grid-area: portfolio;
+}
+
+portfolio-activity {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.5rem;
+}
+
+.skills {
+	grid-area: skills;
 }
 
 .content {
-	flex: 1;
+	grid-area: content;
 	margin-top: 0;
 
 	p:first-of-type {
-	    margin-top: 0;
+		margin-top: 0;
 	}
 }
 
@@ -133,7 +157,6 @@ h2 {
 
 /* skyline */
 .parallax {
-	flex: none;
 	margin: 0;
 	height: 316.333px;
 	overflow: hidden;
@@ -168,12 +191,13 @@ svg {
 
 /* Reflow to one column */
 @media(max-width: 1024px) {
-	.flex-row {
-		flex-direction: column;
-	}
-
-	.header {
-		position: initial;
+	.grid {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas:
+			"header"
+			"portfolio"
+			"skills"
+			"content";
 	}
 }
 
