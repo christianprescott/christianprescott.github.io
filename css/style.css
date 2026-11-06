@@ -35,6 +35,15 @@ div {
 	padding: 1rem;
 }
 
+@media screen {
+	.screen-grid {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+}
+
 .grid > div {
 	min-width: 0;
 	margin: 0;
